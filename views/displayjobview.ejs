@@ -1,0 +1,18 @@
+<div>
+    <% if(rs.length > 0) { %>
+    <table border="1">
+        <tr>
+            <th>User Name</th><th>Company Name</th><th>Job Description</th>
+        </tr>
+        <% for (var i=0; rs.length > i; i++) { %>
+        <tr>
+            <td><a href="/accounts/?account_id=<%= rs[i].account_id %>"> <%= rs[i].fname %> <%= rs[i].lname %></a></td>
+            <td><a href="/gpa/all"> <%= rs[i].cname %></a></td>
+            <td><%= rs[i].discription %></td>
+        </tr>
+        <% } %>
+    </table>
+    <% } else { %>
+    No gpa's are entered into the Company_GPA database view table.
+    <% } %>
+</div>

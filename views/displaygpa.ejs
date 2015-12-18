@@ -1,0 +1,16 @@
+<div>
+    <% if(rs.length > 0) { %>
+    <table border="1">
+        <tr>
+            <th>Company Name</th><th>Average GPA</th><th>Lowest GPA</th><th>Highest GPA</th><th>Number of Applicants</th>
+        </tr>
+        <% for (var i=0; rs.length > i; i++) { %>
+        <tr>
+            <td><%= rs[i].cname %></td> <td><%= rs[i].gpa %></td> <td><%= rs[i].min %></td> <td><%= rs[i].max %></td> <td><%= rs[i].total %></td>
+        </tr>
+        <% } %>
+    </table>
+    <% } else { %>
+    No gpa's are entered into the Company_GPA database view table.
+    <% } %>
+</div>

@@ -1,0 +1,10 @@
+<% if(rs.length > 0) { %>
+Name: <%= rs[0].sname %><br />
+State: <%= rs[0].state %><br />
+City: <%= rs[0].city %><br />
+Street: <%= rs[0].street %><br />
+Zip Code: <%= rs[0].zip %><br />
+
+<% } else { %>
+No schools matched this school id <%= school_id %>.
+<% } %>
